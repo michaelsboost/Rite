@@ -1,7 +1,7 @@
 🏋️‍♂️ RITE – Not Your Momma’s Workout App
 ===================
 
-![](https://raw.githubusercontent.com/michaelsboost/Rite/main/imgs/screenshot.jpeg)
+![](https://raw.githubusercontent.com/michaelsboost/Rite/gh-pages/imgs/screenshot.jpeg)
 
 ## 🌟 Overview
 RITE is a lightweight, browser-based fitness timer built for real training—not trends. Designed to be minimal, fast, and focused, RITE supports sparring, reps, cardio, and stopwatch tracking for serious athletes, martial artists, and fitness enthusiasts.
