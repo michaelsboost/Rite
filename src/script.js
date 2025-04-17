@@ -2,15 +2,7 @@ function App() {
   return {
     app: {
       name: 'RITE',
-      slogan: "NOT YOUR MOMMA'S WORKOUT APP",
-      author: {
-        name: 'Michael Schwartz',
-        href: 'https://michaelsboost.com/',
-        src: '../imgs/author.jpg'
-      },
-      version: '0.0.3',
-      url: 'https://michaelsboost.com/',
-      license: 'https://michaelsboost.com/'
+      slogan: "NOT YOUR MOMMA'S WORKOUT APP"
     },
     dark: true,
     activeMode: 'reps',
