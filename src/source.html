@@ -1,0 +1,380 @@
+<main 
+  x-data="App()" 
+  x-init="theme(); init();" 
+  class="min-h-screen bg-transparent font-extralight tracking-widest flex flex-col">
+
+  <!-- Top-left nav -->
+  <nav class="p-4 self-center text-gray-300">
+    <ul>
+      <li>
+        <a href="https://github.com/michaelsboost/Rite" target="_blank" class="text-current flex items-center justify-center gap-4 no-underline border-0 hover:border-t border-solid">
+          <svg class="w-8 mx-0 sm:mx-2 md:mx-0 md:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+              <path d="M9.096 21.25v-3.146a3.33 3.33 0 0 1 .758-2.115c-3.005-.4-5.28-1.859-5.28-5.798c0-1.666 1.432-3.89 1.432-3.89c-.514-1.13-.5-3.084.06-3.551c0 0 1.95.175 3.847 1.75c1.838-.495 3.764-.554 5.661 0c1.897-1.575 3.848-1.75 3.848-1.75c.558.467.573 2.422.06 3.551c0 0 1.432 2.224 1.432 3.89c0 3.94-2.276 5.398-5.28 5.798a3.33 3.33 0 0 1 .757 2.115v3.146"/>
+              <path d="M3.086 16.57c.163.554.463 1.066.878 1.496c.414.431.932.77 1.513.988a4.46 4.46 0 0 0 3.62-.216"/>
+            </g>
+          </svg>
+          <span class="hidden md:block uppercase font-extralight tracking-widest">source</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://michaelsboost.com/" target="_blank" class="flex items-center justify-center gap-4 no-underline border-0 hover:border-t border-solid">
+          <svg class="w-8 mx-0 sm:mx-2 md:mx-0 md:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+            <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+              <path d="M24 27a8 8 0 1 0 0-16a8 8 0 0 0 0 16m0-2a6 6 0 1 0 0-12a6 6 0 0 0 0 12"/>
+              <path d="M44 24c0 11.046-8.954 20-20 20S4 35.046 4 24S12.954 4 24 4s20 8.954 20 20M33.63 39.21A17.9 17.9 0 0 1 24 42a17.9 17.9 0 0 1-9.831-2.92q-.36-.45-.73-.93A2.14 2.14 0 0 1 13 36.845c0-1.077.774-1.98 1.809-2.131c6.845-1 11.558-.914 18.412.035A2.08 2.08 0 0 1 35 36.818c0 .48-.165.946-.463 1.31q-.461.561-.907 1.082m3.355-2.744c-.16-1.872-1.581-3.434-3.49-3.698c-7.016-.971-11.92-1.064-18.975-.033c-1.92.28-3.335 1.856-3.503 3.733A17.94 17.94 0 0 1 6 24c0-9.941 8.059-18 18-18s18 8.059 18 18a17.94 17.94 0 0 1-5.015 12.466"/>
+            </g>
+          </svg>
+          <span class="hidden md:block uppercase font-extralight tracking-widest">creator</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://michaelsboost.com/donate/" target="_blank" class="text-red-400 flex items-center justify-center gap-4 no-underline border-0 hover:border-t border-solid">
+          <svg class="w-8 mx-0 sm:mx-2 md:mx-0 md:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16.696 3C14.652 3 12.887 4.197 12 5.943C11.113 4.197 9.348 3 7.304 3C4.374 3 2 5.457 2 8.481s1.817 5.796 4.165 8.073S12 21 12 21s3.374-2.133 5.835-4.446C20.46 14.088 22 11.514 22 8.481S19.626 3 16.696 3"/>
+          </svg>
+          <span class="hidden md:block uppercase font-extralight tracking-widest">donate</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" @click="toggleTheme" class="text-current flex items-center justify-center gap-4 no-underline border-0 hover:border-t border-solid">
+          <svg class="w-8 mx-0 sm:mx-2 md:mx-0 md:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <path fill="currentColor" fill-rule="evenodd" d="M4.17 8.533C2.21 5.5 4.388 1.5 8 1.5s5.79 4 3.83 7.033L9.592 12H6.408zM5 12.584L2.91 9.347C.305 5.315 3.2 0 8 0s7.694 5.315 5.09 9.347L11 12.584V14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2zm1.5.916v.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-.5z" clip-rule="evenodd"/></svg>
+          <span class="hidden md:block uppercase font-extralight tracking-widest">light/dark</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Centered content -->
+  <div class="flex-grow flex items-center justify-center px-4">
+    <div class="w-full max-w-md text-center space-y-8">
+      <header x-show="countdownSeconds === 0">
+        <hgroup class=" uppercase text-center">
+          <h1 class="text-6xl mb-4">RITE</h1>
+          <h2 class="mb-4">Not your momma's workout app</h2>
+        </hgroup>
+      </header>
+      
+      <!-- 👇 Countdown Display -->
+      <div x-show="countdownSeconds > 0"
+          x-transition
+          class="text-[120px] leading-none text-center font-bold drop-shadow-lg select-none pointer-events-none">
+        <div x-text="countdownSeconds"></div>
+      </div>
+
+      <div x-show="countdownSeconds === 0" class="grid grid-cols-1 gap-4">
+        <button
+          @click="setMode('reps')"
+          x-show="!timer.isActive"
+          class="w-full uppercase font-extralight tracking-widest border border-gray-500 shadow-none transition-colors duration-200"
+          :class="{
+            'bg-transparent text-current': activeMode !== 'reps',
+            'bg-white text-black': activeMode === 'reps' && dark,
+            'bg-black text-white': activeMode === 'reps' && !dark,
+            'hover:bg-white hover:text-black': dark,
+            'hover:bg-black hover:text-white': !dark
+          }">
+          reps
+        </button>
+        <button 
+          @click="setMode('cardio')" 
+          x-show="!timer.isActive"
+          class="w-full uppercase font-extralight tracking-widest border border-gray-500 shadow-none transition-colors duration-200"
+          :class="{
+            'bg-transparent text-current': activeMode !== 'cardio',
+            'bg-white text-black': activeMode === 'cardio' && dark,
+            'bg-black text-white': activeMode === 'cardio' && !dark,
+            'hover:bg-white hover:text-black': dark,
+            'hover:bg-black hover:text-white': !dark
+          }">
+          cardio
+        </button>
+        <button 
+          @click="setMode('sparring')" 
+          x-show="!timer.isActive"
+          class="w-full uppercase font-extralight tracking-widest border border-gray-500 shadow-none transition-colors duration-200"
+          :class="{
+            'bg-transparent text-current': activeMode !== 'sparring',
+            'bg-white text-black': activeMode === 'sparring' && dark,
+            'bg-black text-white': activeMode === 'sparring' && !dark,
+            'hover:bg-white hover:text-black': dark,
+            'hover:bg-black hover:text-white': !dark
+          }">
+          sparring
+        </button>
+
+        <!-- Reps Mode Content -->
+        <details x-show="activeMode === 'reps'" class="space-y-4 pt-4" open>
+          <summary class="text-left uppercase tracking-widest">rep settings</summary>
+          <div x-show="!timer.isActive" class="grid -mt-6 grid-cols-2 gap-2">
+            <div class="flex flex-col gap-2">
+              <span class="uppercase">reps</span>
+              <button 
+                @click="openModal('reps')"
+                x-text="modes.reps.repsPerInterval"
+                class="w-full uppercase bg-transparent font-extralight tracking-widest text-current border-gray-500 hover:bg-white hover:text-black">
+              </button>
+            </div>
+            <div class="flex flex-col gap-2">
+              <span class="uppercase">interval</span>
+              <button 
+                @click="openModal('interval')"
+                x-text="modes.reps.intervalSeconds + ' sec'"
+                class="w-full uppercase bg-transparent font-extralight tracking-tighter text-current border-gray-500 hover:bg-white hover:text-black">
+              </button>
+            </div>
+            <div class="flex flex-col gap-2">
+              <button 
+                @click="openModal('duration')"
+                x-text="modes.reps.duration.hour.toString().padStart(2, '0') + ':' + 
+                      modes.reps.duration.minute.toString().padStart(2, '0') + ':' + 
+                      modes.reps.duration.second.toString().padStart(2, '0')"
+                class="w-full uppercase bg-transparent font-extralight tracking-tighter text-current border-gray-500 hover:bg-white hover:text-black">
+              </button>
+              <span class="uppercase">duration</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <button 
+                @click="openModal('totalReps')"
+                x-text="stats.totalProjectedReps"
+                class="w-full uppercase bg-transparent font-extralight tracking-tighter text-current border-gray-500 hover:bg-white hover:text-black">
+              </button>
+              <span class="uppercase">total</span>
+            </div>
+          </div>
+
+          <div x-show="timer.isActive" class="text-center mt-4 space-y-2">
+            <div class="uppercase tracking-widest">time remaining</div>
+            <div class="text-3xl" x-text="formatTime(timer.remainingSeconds)"></div>
+            
+            <div class="uppercase tracking-widest">reps completed</div>
+            <div class="text-2xl" x-text="timer.completedReps"></div>
+          </div>
+        </details>
+        
+        <!-- Cardio Mode Content -->
+        <div x-show="activeMode === 'cardio'" class="grid grid-cols-1 gap-4">
+          <!-- Stopwatch Sub-tool -->
+          <details x-show="activeMode === 'cardio'" class="space-y-4 pt-4" open>
+            <summary class="text-left uppercase tracking-widest">Stopwatch</summary>
+            <div class="text-3xl" x-text="formatTime(stopwatch.time)"></div>
+            <div class="grid grid-cols-2 gap-2">
+              <button 
+                @click="stopwatch.isActive ? stopStopwatch() : startStopwatch()"
+                :class="{
+                  'bg-white text-black': dark,
+                  'bg-black text-white': !dark,
+                  'hover:bg-white hover:text-black': dark,
+                  'hover:bg-black hover:text-white': !dark
+                }"
+                class="w-full uppercase font-extralight tracking-widest border border-gray-500 shadow-none transition-colors duration-200">
+                <span x-text="stopwatch.isActive ? 'Stop' : 'Start'"></span>
+              </button>
+
+              <button 
+                @click="resetStopwatch" 
+                class="bg-transparent text-red-500 border-red-500 border-solid p-2 uppercase font-extralight tracking-widest shadow-none">
+                Reset
+              </button>
+            </div>
+            <button @click="recordLap" :disabled="!stopwatch.isActive" class="w-full bg-blue-500 text-white p-2 uppercase shadow-none">Lap</button>
+            <ul class="text-left list-none p-0">
+              <!-- <template x-for="(lap, index) in stopwatch.laps" :key="index">
+                <li class="m-0 p-1 grid grid-cols-2">
+                  <span x-text="'Lap ' + (index + 1)"></span>
+                  <span class="text-right" x-text="lap"></span>
+                </li>
+              </template> -->
+              <template x-for="(lap, index) in stopwatch.laps.slice().reverse()" :key="index">
+                <li class="m-0 p-1 grid grid-cols-2">
+                  <span x-text="'Lap ' + (stopwatch.laps.length - index)"></span>
+                  <span class="text-right" x-text="lap"></span>
+                </li>
+              </template>
+
+            </ul>
+          </details>
+        
+          <!-- Settings before timer starts -->
+          <details x-show="!timer.isActive" class="space-y-4">
+            <summary class="text-left uppercase tracking-widest">cardio settings</summary>
+            
+            <!-- Duration Button -->
+            <div class="flex flex-col gap-2 col-span-2">
+              <button 
+                @click="openModal('cardioDuration')" 
+                class="flex justify-between p-3 rounded w-full uppercase bg-transparent font-extralight tracking-widest text-current border border-solid border-gray-500 hover:bg-white hover:text-black">
+                <span>duration:</span>
+                <span x-text="modes.cardio.duration.hour.toString().padStart(2, '0') + ':' + 
+                      modes.cardio.duration.minute.toString().padStart(2, '0') + ':' + 
+                      modes.cardio.duration.second.toString().padStart(2, '0')"></span>
+              </button>
+            </div>
+
+            <button 
+              @click="startTimer()" 
+              x-show="!timer.isActive"
+              :class="{
+                'bg-white text-black': dark,
+                'bg-black text-white': !dark,
+                'hover:bg-white hover:text-black': dark,
+                'hover:bg-black hover:text-white': !dark
+              }"
+              class="w-full uppercase font-extralight tracking-widest border border-gray-500 shadow-none transition-colors duration-200">
+              begin
+            </button>
+          </details>
+        
+          <!-- Timer Display -->
+          <div x-show="timer.isActive && timer.mode === 'cardio'" class="text-center mt-4 space-y-2">
+            <div class="uppercase tracking-widest">time remaining</div>
+            <div class="text-3xl" x-text="formatTime(timer.remainingSeconds)"></div>
+          </div>
+        </div>
+
+        <!-- Sparring Mode Content -->
+        <details x-show="activeMode === 'sparring'" class="space-y-4 pt-4" open>
+          <summary class="text-left uppercase tracking-widest pb-4">sparring settings</summary>
+          
+          <div x-show="!timer.isActive" class="grid -mt-6 grid-cols-3 gap-2">
+            <!-- ROUNDS -->
+            <div class="flex flex-col gap-2">
+              <span class="uppercase">rounds</span>
+              <button 
+                @click="openModal('sparringRounds')"
+                x-text="modes.sparring.rounds + ' rounds'"
+                class="w-full uppercase bg-transparent font-extralight tracking-widest text-current border-gray-500 hover:bg-white hover:text-black">
+              </button>
+            </div>
+            
+            <!-- ROUND TIME -->
+            <div class="flex flex-col gap-2">
+              <span class="uppercase">round time</span>
+              <button 
+                @click="openModal('sparringRoundTime')"
+                x-text="modes.sparring.roundDuration.minute + ':' + modes.sparring.roundDuration.second.toString().padStart(2, '0')"
+                class="w-full uppercase bg-transparent font-extralight tracking-widest text-current border-gray-500 hover:bg-white hover:text-black">
+              </button>
+            </div>
+            
+            <!-- REST TIME -->
+            <div class="flex flex-col gap-2">
+              <span class="uppercase">rest time</span>
+              <button 
+                @click="openModal('sparringRestTime')"
+                x-text="modes.sparring.restDuration.minute + ':' + modes.sparring.restDuration.second.toString().padStart(2, '0')"
+                class="w-full uppercase bg-transparent font-extralight tracking-widest text-current border-gray-500 hover:bg-white hover:text-black">
+              </button>
+            </div>
+          </div>
+          <div x-show="timer.isActive && timer.mode === 'sparring'" class="text-center mt-4 space-y-2">
+          <div class="uppercase tracking-widest" x-text="timer.isRest ? 'rest phase' : 'round ' + timer.currentRound"></div>
+          <div class="text-3xl" x-text="formatTime(timer.remainingSeconds)"></div>
+        </div>
+        </details>
+
+        <button 
+          @click="startTimer()" 
+          x-show="!timer.isActive && activeMode !== 'cardio'"
+          :class="{
+            'bg-white text-black': dark,
+            'bg-black text-white': !dark,
+            'hover:bg-white hover:text-black': dark,
+            'hover:bg-black hover:text-white': !dark
+          }"
+          class="w-full uppercase font-extralight tracking-widest border border-gray-500 shadow-none transition-colors duration-200">
+          begin
+        </button>
+        
+        <button 
+          @click="stopTimer()" 
+          x-show="timer.isActive"
+          class="w-full uppercase bg-red-500 text-white font-extralight tracking-widest border border-gray-500">
+          stop
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <dialog x-ref="modal" @keydown.escape.window="closeModal()" class="z-50" x-cloak>
+    <article>
+      <header class="text-center">
+        <h2 x-text="modal.title" class="uppercase font-extralight tracking-widest text-xl"></h2>
+      </header>
+  
+      <!-- Dynamic Fields -->
+      <template x-if="modal.type === 'reps'">
+        <div class="grid grid-cols-1 gap-2">
+          <label class="uppercase tracking-widest text-left text-sm">Reps per Set</label>
+          <input type="number" min="1" x-model.number="modes.reps.repsPerInterval" class="bg-transparent border border-gray-500 p-2 text-center" />
+        </div>
+      </template>
+  
+      <template x-if="modal.type === 'interval'">
+        <div class="grid grid-cols-1 gap-2">
+          <label class="uppercase tracking-widest text-left text-sm">Interval (sec)</label>
+          <input type="number" min="1" x-model.number="modes.reps.intervalSeconds" class="bg-transparent border border-gray-500 p-2 text-center" />
+        </div>
+      </template>
+  
+      <template x-if="modal.type === 'duration'">
+        <div class="grid grid-cols-3 gap-2">
+          <input type="number" min="0" placeholder="hh" x-model.number="modes.reps.duration.hour" class="bg-transparent border border-gray-500 p-2 text-center" />
+          <input type="number" min="0" max="59" placeholder="mm" x-model.number="modes.reps.duration.minute" class="bg-transparent border border-gray-500 p-2 text-center" />
+          <input type="number" min="0" max="59" placeholder="ss" x-model.number="modes.reps.duration.second" class="bg-transparent border border-gray-500 p-2 text-center" />
+        </div>
+      </template>
+
+      <template x-if="modal.type === 'totalReps'">
+        <div class="grid grid-cols-1 gap-2">
+          <label class="uppercase tracking-widest text-left text-sm">Total Reps Goal</label>
+          <input type="number" min="1" x-model.number="modes.reps.totalReps" class="bg-transparent border border-gray-500 p-2 text-center" />
+        </div>
+      </template>
+
+      <template x-if="modal.type === 'cardioDuration'">
+        <div class="grid grid-cols-3 gap-2">
+          <input type="number" min="0" placeholder="hh" x-model.number="modes.cardio.duration.hour" class="bg-transparent border border-gray-500 p-2 text-center" />
+          <input type="number" min="0" max="59" placeholder="mm" x-model.number="modes.cardio.duration.minute" class="bg-transparent border border-gray-500 p-2 text-center" />
+          <input type="number" min="0" max="59" placeholder="ss" x-model.number="modes.cardio.duration.second" class="bg-transparent border border-gray-500 p-2 text-center" />
+        </div>
+      </template>
+
+      <!-- Sparring: Rounds -->
+      <template x-if="modal.type === 'sparringRounds'">
+        <div class="grid grid-cols-1 gap-2">
+          <label class="uppercase tracking-widest text-left text-sm">Number of Rounds</label>
+          <input type="number" min="1" x-model.number="modes.sparring.rounds" class="bg-transparent border border-gray-500 p-2 text-center" />
+        </div>
+      </template>
+      
+      <!-- Sparring: Round Time -->
+      <template x-if="modal.type === 'sparringRoundTime'">
+        <div class="grid grid-cols-2 gap-2">
+          <input type="number" min="0" max="59" placeholder="mm" x-model.number="modes.sparring.roundDuration.minute" class="bg-transparent border border-gray-500 p-2 text-center" />
+          <input type="number" min="0" max="59" placeholder="ss" x-model.number="modes.sparring.roundDuration.second" class="bg-transparent border border-gray-500 p-2 text-center" />
+        </div>
+      </template>
+      
+      <!-- Sparring: Rest Time -->
+      <template x-if="modal.type === 'sparringRestTime'">
+        <div class="grid grid-cols-2 gap-2">
+          <input type="number" min="0" max="59" placeholder="mm" x-model.number="modes.sparring.restDuration.minute" class="bg-transparent border border-gray-500 p-2 text-center" />
+          <input type="number" min="0" max="59" placeholder="ss" x-model.number="modes.sparring.restDuration.second" class="bg-transparent border border-gray-500 p-2 text-center" />
+        </div>
+      </template>
+  
+      <footer class="mt-4 grid grid-cols-1 gap-2">
+        <button @click="saveModal()" class="contrast uppercase font-extralight tracking-widest">Save</button>
+        <!-- <button @click="closeModal()" class="uppercase font-extralight tracking-widest">Cancel</button> -->
+      </footer>
+    </article>
+  </dialog>
+</main>
+
+<audio id="bell-sound" preload="auto">
+  <source src="https://cdn.freesound.org/previews/66/66952_634166-lq.mp3" type="audio/mpeg" />
+  <source src="https://cdn.freesound.org/previews/66/66952_634166-lq.ogg" type="audio/ogg" />
+  Your browser does not support the audio element.
+</audio>

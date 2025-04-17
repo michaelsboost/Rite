@@ -1,99 +1,100 @@
-Michael's Workout App
+🏋️‍♂️ RITE – Not Your Momma’s Workout App
 ===================
 
-A new way to challenge yourself in the gym!
+![](https://raw.githubusercontent.com/michaelsboost/Rite/main/imgs/screenshot.jpeg)
 
+## 🌟 Overview
+RITE is a lightweight, browser-based fitness timer built for real training—not trends. Designed to be minimal, fast, and focused, RITE supports sparring, reps, cardio, and stopwatch tracking for serious athletes, martial artists, and fitness enthusiasts.
 
-Select Your Workout!
--------------
+[![MIT License](https://img.shields.io/github/license/michaelsboost/Rite)](LICENSE) [![GitHub Stars](https://img.shields.io/github/stars/michaelsboost/Rite)](https://github.com/michaelsboost/Rite/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/michaelsboost/Rite)](https://github.com/michaelsboost/Rite/issues)
 
-![](https://raw.githubusercontent.com/michaelsboost/Michaels-Workout-App/gh-pages/screenshot1.png)
+## 🚀 **Launch the App**
+Live version: **[RITE App](https://michaelsboost.com/Rite/)**
 
-Input Your Parameters!
--------------
+> 📲 **Progressive Web App (PWA) Ready**  
+> Install it to your home screen and use it offline, anywhere, anytime.
 
-![](https://raw.githubusercontent.com/michaelsboost/Michaels-Workout-App/gh-pages/screenshot2.png)
-![](https://raw.githubusercontent.com/michaelsboost/Michaels-Workout-App/gh-pages/screenshot3.png)
+---
 
-Then Execute!
--------------
+### **🧠 Philosophy**
+RITE doesn’t do social feeds or gamification. It’s about discipline, intensity, and showing up. A tool for those who train with purpose.
 
-![](https://raw.githubusercontent.com/michaelsboost/Michaels-Workout-App/gh-pages/screenshot4.png)
-![](https://raw.githubusercontent.com/michaelsboost/Michaels-Workout-App/gh-pages/screenshot5.png)
+> “If you want to be tough, be tougher.” – Jocko Willink
 
-[See the saved workout log (.txt)](https://github.com/michaelsboost/Michaels-Workout-App/blob/gh-pages/workout_log%209_11_2019%205_34_35%20AM.txt)  
-[See the saved workout log (.png)](https://github.com/michaelsboost/Michaels-Workout-App/blob/gh-pages/workout_log%209_11_2019%205_34_35%20AM.png)
--------------
+## 🛠️ Key Features  
 
-Version
--------------
+**🏋️ Reps Mode**
+  - Set your reps per interval
+  - Customize interval timing
+  - Choose total duration or rep goal
+  - Tracks reps over time with optional audio feedback
 
-0.8
+**⚡ Cardio Mode**
+  - Countdown timer with full customization
+  - Built-in stopwatch for lap tracking
+  - Pre-countdown included for setup
 
-License
--------------
+**🥊 Sparring Mode**
+  - Set round and rest durations
+  - Choose total number of rounds
+  - Audio bell for round changes
 
-MIT
+**⏱️ Stopwatch Sub-Tool**
+  - Simple start/stop/reset functionality
+  - Records lap times during cardio training
 
-Availability
--------------
+**🔊 Smart Audio Alerts**
+  - AudioContext dings for reps & cardio
+  - Bell sound reserved for sparring only
+  - Audio controlled by user toggle
 
-[![Get it on Google Play](https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=com.michael.workoutapp&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1)
+**💾 Persistent Settings**
+  - Saves user settings and progress locally
+  - No sign-in or internet required
 
-Hotkeys
--------------
+---
 
-* Arrow Keys - Select workout type
-* Enter  - Initialize inputs (also goes to next page after you select workout type)  
-* Escape - Go back a page and/or quit current workout
-* Escape - Initialize new workout
-* Spacebar - Pause/Resume workout
-* Spacebar - Initialize new workout
-* Ctrl+S - Save workout log (.txt)   
-* Cmd+S  - Save workout log (.txt) on mac  
-* Ctrl+E - Download workout log (.png)  
-* Cmd+E  - Download workout log (.png) on mac  
-* Ctrl+N - Initialize new workout  
+## **⚡ Getting Started**
+### **1️⃣ Install & Run Locally**
+```sh
+# Clone the repository
+git clone https://github.com/michaelsboost/Rite.git
+cd Rite
 
-Tech
--------------
+# Open index.html in a browser
+```
 
-Michael's Workout App uses a number of open source projects to work properly:
+### **2️⃣ Dependencies**
+- Alpine.js (core interactivity)
+- TailwindCSS (styling)
+- HTML5 Audio / Web Audio API
 
-* [jQuery](http://jquery.com/) - Because the [scrollintoview](https://github.com/litera/jquery-scrollintoview) plugin requires it
-* [Normalize](https://github.com/necolas/normalize.css) - CSS reset library
-* [Poly UI Kit](https://github.com/Guilh/Poly) - Beautiful and customizable responsive interface library
-* [AlertifyJS](https://github.com/fabien-d/alertify.js/tree/0.3) - Customizable notification system
-* [SweetAlert2](https://sweetalert2.github.io/) - Stylish alert dialog
-* [FileSaver.js](https://github.com/eligrey/FileSaver.js/) - Client-side solution for saving files
-* [Lity](https://sorgalla.com/lity/) - Lightbox for how to videos
-* [html2canvas](https://html2canvas.hertzen.com) - Turn viewable canvas into a downloadable image
-* [platform.js](https://github.com/bestiejs/platform.js/) - Library that detects web browsers
-* [Awesomplete](https://leaverou.github.io/awesomplete/) - Simple autocomplete widget
+### **📁 Assets & Credits**
+- [🥊 “Boxing Bell Start Round”](https://freesound.org/people/Benboncan/sounds/66952/) by [Benboncan](https://freesound.org/people/Benboncan/)
 
-Development
--------------
+### **🤝 Contributing**
+Want to contribute?
+- Fork the repo
+- Create a feature branch (`feature-new-mode`)
+- Submit a pull request 🎉 and help others level up 💪
 
-Want to contribute? Great!  
+---
 
-You can submit a pull request or simply share the project :)
+## **📜 License**
+Licensed under the **MIT License** — free to use, share, and remix.
 
-Of course, Michael's Workout App is free and open source, so you can always fork the project and have fun :)
+**Developed by:** [Michael Schwartz](https://michaelsboost.com/)  
+**Maintained by:** The community (as of April 17, 2025)
 
-[![ko-fi](https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0)](https://ko-fi.com/michaelsboost)
+## **☕ Support the Developer**
+If RITE was helpful for you, consider showing your appreciation in the following ways:
 
-If my Workout App was at all helpful for you. You can show your appreciation a few ways...
+- 🎨 Check out my Graphic Design Course: https://michaelsboost.com/graphicdesign  
+- 🛒 Register as a customer on my store: https://michaelsboost.com/store  
+- ☕ Buy me a coffee: http://ko-fi.com/michaelsboost  
+- 👕 Purchase a T-Shirt: https://michaelsboost.com/gear  
+- 🖼️ Buy my art prints: https://deviantart.com/michaelsboost/prints 
+- 💰 Donate via PayPal: https://michaelsboost.com/donate 
+- 💵 Donate via Cash App: https://cash.me/$michaelsboost  
 
-1) Registering on my store as a customer: http://michaelsboost.com/store
-2) Buying me a coffee! http://ko-fi.com/michaelsboost
-3) Purchasing one of my t-shirts: https://michaelsboost.com/gear
-4) Purchasing any of my art: https://deviantart.com/michaelsboost
-5) Donating via PayPal: https://michaelsboost.com/donate
-6) Donating via SquareCash: https://cash.me/$michaelsboost
-
-Background
--------------
-
-Every day I get asked what do I do fitness-wise. I mix things up basically for me if it doesn't suck it's not worth doing. Like 1,020 pushups a day, running 100 miles a week, etc: I put my body through hell as a means of callusing my mind like we callus our hands so I can stay mentally and physically strong. I still do progressive overload however my main method and focus upon fitness is endurance exercises as I've been big into fitness and martial arts my whole life. So that's why I created this application. I used to log writing on paper now the app does it for me.
-
-![](https://raw.githubusercontent.com/michaelsboost/Michaels-Workout-App/gh-pages/me.jpg)
+Your support is greatly appreciated and helps fund future projects! 🚀

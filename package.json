@@ -1,0 +1,22 @@
+{
+  "name": "rite",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "build:css": "postcss src/bundle.css -o dist/bundle.css",
+    "build:js": "rollup -c",
+    "build": "npm run build:css && npm run build:js",
+    "serve": "http-server -c-1 -p 8081"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "autoprefixer": "^10.4.19",
+    "cssnano": "^7.0.2",
+    "http-server": "^14.1.1",
+    "postcss": "^8.4.38",
+    "postcss-import": "^16.1.0",
+    "rollup": "^2.79.1",
+    "tailwindcss": "^3.4.4",
+    "terser": "^5.10.0"
+  }
+}
