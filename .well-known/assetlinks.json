@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.michaelsboost.rite",
+        "sha256_cert_fingerprints": ["47:56:69:B6:60:47:55:47:12:C6:CD:21:5B:AE:D4:21:24:30:59:F8:D2:D2:4B:78:17:EA:A5:F1:54:7C:16:05"]
+      }
+    }]
