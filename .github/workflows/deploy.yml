@@ -1,0 +1,24 @@
+name: Deploy GitHub Pages with .well-known
+
+on:
+  push:
+    branches: [gh-pages] # working branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Rename wellknown to .well-known
+        run: |
+          if [ -d "Rite/wellknown" ]; then
+            mv Rite/wellknown Rite/.well-known
+          fi
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./Rite
