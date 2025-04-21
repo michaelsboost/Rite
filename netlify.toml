@@ -1,6 +1,3 @@
-[build]
-  publish = "public" # or "dist" or wherever your site is built to
-
 [[redirects]]
   from = "/.well-known/*"
   to = "/.well-known/:splat"
