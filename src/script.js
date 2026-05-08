@@ -32,7 +32,7 @@ function App() {
     async shareApp() {
       if (navigator.share) {
         await navigator.share({
-          title: "ChartDojo",
+          title: "Rite",
           text: "Check this out",
           url: window.location.href
         });
