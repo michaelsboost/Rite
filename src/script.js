@@ -2,7 +2,7 @@ function App() {
   return {
     app: {
       name: 'RITE',
-      slogan: "NOT YOUR MOMMA'S WORKOUT APP"
+      slogan: "NOT YOUR MOMMA'S WORKOUT APP",
     },
     dark: true,
     activeMode: 'reps',
@@ -27,6 +27,17 @@ function App() {
             console.log('Wake lock released');
             this.wakeLock = null;
           });
+      }
+    },
+    async shareApp() {
+      if (navigator.share) {
+        await navigator.share({
+          title: "ChartDojo",
+          text: "Check this out",
+          url: window.location.href
+        });
+      } else {
+        alert("Sharing is not supported on this browser.");
       }
     },
     modal: {
